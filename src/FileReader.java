@@ -44,6 +44,7 @@ public class FileReader {
 
         String teamname = "";
         int ranking = 0;
+        double score = 0.0;
         int gp = 0;
         double score1 = 0.0;
         double score2 = 0.0;
@@ -58,14 +59,12 @@ public class FileReader {
             }
 
             ranking = lineIn.nextInt();
+            score = lineIn.nextDouble();
             gp = lineIn.nextInt();
             score1 = lineIn.nextDouble();
-
-            //System.out.println(lineIn.next());
-
             score2 = lineIn.nextDouble();
 
-            Team newTeam = new Team(teamname, ranking, gp, score1, score2);
+            Team newTeam = new Team(teamname, ranking, score, gp, score1, score2);
             listRead.add(newTeam);
 
 
