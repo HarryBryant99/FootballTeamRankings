@@ -82,7 +82,7 @@ public class Team {
         if (getNewGamesPlayed() > 0){
             setGamesPlayed(getGamesPlayed()+getNewGamesPlayed());
             setScore2(getScore1());
-            setScore1(getPoints()/newGamesPlayed);
+            setScore1((Math.round((getPoints()/newGamesPlayed)*100.0))/100.0);
         }
     }
 
